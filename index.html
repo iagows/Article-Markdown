@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="Content-Type: text/html; charset=UTF-8">
+		<title>Markdown</title>
+		<link rel="stylesheet" href="css/css.css">		
+		<link rel="stylesheet" href="ui/jquery-ui.css">
+		
+		<script src="ui/external/jquery/jquery.js"></script>
+		<script src="ui/jquery-ui.js"></script>
+		<script src="marked/lib/marked.js"></script>
+		<script src="js.js"></script>
+	</head>
+	<body>
+		<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Cheatsheet</a>
+		<br>
+		<div class="all">
+			<div class="left-content">
+				<div id="text-editor">
+					<span id="text-bts">
+						<button id="negrito"><b>B</b></button>
+						<button id="italico"><i>I</i></button>
+						<button id="taxado"><del>del</del></button>
+						<button id="linha">HR</button>
+					</span>
+					<span id="list-bts">
+						<button id="lista">List</button>
+						<button id="ordenada">Ordered List</button>
+					</span>
+					
+					<span>
+						<label for="headers"><button id='head-bt'>Add</button></label>
+						<select name="headers" id="headers">
+							<option label="#">H1</option>
+							<option label="##">H2</option>
+							<option label="###">H3</option>
+							<option label="####">H4</option>
+							<option label="#####">H5</option>
+							<option label="######">H6</option>
+						</select>
+					</span>
+					
+					<span id="more-bts">
+						<button id="citacao">Quote</button>
+				
+						<button id="image">img</button>
+						<button id="link">link</button>
+						<button id="referencia">ref</button>
+						<button id="tabela">Table</button>
+						<button id="code">code</button>
+					</span>
+					<br>
+					<textarea id="input-text" rows="30" placeholder="*Write your text here*"></textarea>
+				</div>
+			</div>
+			<div class="right-content">
+				<style scoped>
+					:scope h1 {
+						text-transform: uppercase;
+						counter-reset: h2counter;
+					}
+					:scope p {
+						text-align: justify;
+						text-indent: 1em;
+					}
+					:scope body {
+						counter-reset: h2counter;
+					}
+					:scope h2, :scope h3 {text-transform: uppercase;}
+					:scope h2:before {
+						content: counter(h2counter) ".\0000a0\0000a0";
+						counter-increment: h2counter;
+						counter-reset: h3counter;
+					}
+					:scope h3:before {
+						content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+						counter-increment: h3counter;
+					}
+					:scope blockquote {
+						background: #f9f9f9;
+						border-left: 10px solid #ccc;
+						margin: 1.5em 10px;
+						padding: 0.5em 10px;
+						quotes: "\201C""\201D""\2018""\2019";
+					}
+					:scope blockquote:before {
+						color: #ccc;
+						content: open-quote;
+						font-size: 4em;
+						line-height: 0.1em;
+						margin-right: 0.25em;
+						vertical-align: -0.4em;
+					}
+					:scope blockquote:after {
+						color: #ccc;
+						content: close-quote;
+						font-size: 4em;
+						line-height: 0.1em;
+						margin-right: 0.25em;
+						vertical-align: -0.4em;
+					}
+					:scope blockquote p {
+						display: inline;
+					}
+				</style>
+				<div id="text-receiver">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

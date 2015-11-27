@@ -1,0 +1,34 @@
+body
+{
+	margin: 0 !important;
+	padding: 0 !important;
+	font-size: 0.7em;
+}
+#input-text
+{
+	width: 99%;
+}
+
+#text-editor
+{
+	display: inline-block;
+}
+
+div.left-content
+{
+	top:0;
+	width:50%;
+	left:0;
+	float:left;
+}
+
+div.right-content
+{
+	top:0;
+	vertical-align:top;
+}
+span, button,
+select{
+    display: inline-flex;
+    vertical-align: middle;
+}
