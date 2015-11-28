@@ -102,6 +102,27 @@
 					:scope blockquote p {
 						display: inline;
 					}
+
+					:scope table {
+						border: 1px solid black;
+						border-spacing: 0;
+						border-collapse: collapse;
+					} 
+
+					:scope thead tr th:only-child {
+						background-color: #FFF;
+					}
+
+					:scope thead th {
+						border: 1px solid black;
+						text-align: center; font-weight: bold;
+						background-color: #C0C0C0;
+					}
+
+					:scope tbody td {
+						border: 1px solid black;
+						border-spacing: 0;
+					}
 				</style>
 				<div id="text-receiver">
 				</div>
