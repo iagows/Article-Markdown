@@ -68,7 +68,7 @@ $(function() {
 
 function createImageTable()
 {
-	var img = "\n\n| ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png \"Image\") |\n";
+	var img = "\n\n| ![](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png) |\n";
 	var line1 = "| :---: |\n";
 	var sub = "| **Image num**: texto qualquer. |\n";
 
