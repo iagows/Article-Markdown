@@ -124,4 +124,7 @@ function updatePreview()
 	var receiverDiv = byId('text-receiver');
 	var editor = byId('input-text');
 	var text = editor.value;
+	text = marked(text);
+
+	receiverDiv.innerHTML = text;
 }
