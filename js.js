@@ -134,10 +134,10 @@ function byId(id)
 
 function updatePreview()
 {
-	var receiverDiv = byId('text-receiver');
+	var receiver = byId('text-receiver');
 	var editor = byId('input-text');
 	var text = editor.value;
 	text = marked(text);
 
-	receiverDiv.innerHTML = text;
+	receiver.innerHTML = text;
 }
