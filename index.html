@@ -95,74 +95,7 @@ Texto em **negrito**
 			</div>
 			<div class="right-content">
 				<style scoped>
-					:scope h1 {
-						text-transform: uppercase;
-						counter-reset: h2counter;
-					}
-					:scope p {
-						text-align: justify;
-						text-indent: 1em;
-					}
-					:scope body {
-						counter-reset: h2counter;
-					}
-					:scope h2, :scope h3 {text-transform: uppercase;}
-					:scope h2:before {
-						content: counter(h2counter) ".\0000a0\0000a0";
-						counter-increment: h2counter;
-						counter-reset: h3counter;
-					}
-					:scope h3:before {
-						content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
-						counter-increment: h3counter;
-					}
-					:scope blockquote {
-						background: #f9f9f9;
-						border-left: 10px solid #ccc;
-						margin: 1.5em 10px;
-						padding: 0.5em 10px;
-						quotes: "\201C""\201D""\2018""\2019";
-					}
-					:scope blockquote:before {
-						color: #ccc;
-						content: open-quote;
-						font-size: 4em;
-						line-height: 0.1em;
-						margin-right: 0.25em;
-						vertical-align: -0.4em;
-					}
-					:scope blockquote:after {
-						color: #ccc;
-						content: close-quote;
-						font-size: 4em;
-						line-height: 0.1em;
-						margin-right: 0.25em;
-						vertical-align: -0.4em;
-					}
-					:scope blockquote p {
-						display: inline;
-					}
-
-					:scope table {
-						border: 1px solid black;
-						border-spacing: 0;
-						border-collapse: collapse;
-					} 
-
-					:scope thead tr th:only-child {
-						background-color: #FFF;
-					}
-
-					:scope thead th {
-						border: 1px solid black;
-						text-align: center; font-weight: bold;
-						background-color: #C0C0C0;
-					}
-
-					:scope tbody td {
-						border: 1px solid black;
-						border-spacing: 0;
-					}
+					@import url(css/generated.css);
 				</style>
 				<div id="text-receiver">
 				</div>

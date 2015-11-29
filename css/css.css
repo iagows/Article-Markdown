@@ -6,12 +6,7 @@ body
 }
 #input-text
 {
-	width: 99%;
-}
-
-#text-editor
-{
-	display: inline-block;
+	width: 97%;
 }
 
 div.left-content
@@ -20,12 +15,14 @@ div.left-content
 	width:50%;
 	left:0;
 	float:left;
+	height: 100vh;
 }
 
 div.right-content
 {
 	top:0;
 	vertical-align:top;
+	left:50%;
 }
 span, button,
 select{
