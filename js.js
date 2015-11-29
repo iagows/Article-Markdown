@@ -1,6 +1,7 @@
 $(function() {
 	var editor = byId('input-text');
 	editor.onkeyup = updatePreview;
+
 	//botões
 	$("#link").button({
 		icons: {
@@ -140,4 +141,7 @@ function updatePreview()
 	text = marked(text);
 
 	receiver.innerHTML = text;
+	/*
+	editor.style.height = "1px";
+    editor.style.height = (25+editor.scrollHeight)+"px";*/
 }
