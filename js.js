@@ -63,7 +63,7 @@ $(function() {
 	$("#citacao").click(function() {
 		addAtLineBegining("> ");
 	});
-
+	updatePreview();
 });
 
 function createImageTable()
