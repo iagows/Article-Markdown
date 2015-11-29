@@ -12,43 +12,43 @@
 		<script src="js.js"></script>
 	</head>
 	<body>
+		<div id="nav">
+			<span id="text-bts">
+				<button id="negrito"><b>B</b></button>
+				<button id="italico"><i>I</i></button>
+				<button id="taxado"><del>del</del></button>
+				<button id="linha">HR</button>
+			</span>
+			<span id="list-bts">
+				<button id="lista">List</button>
+				<button id="ordenada">Ordered List</button>
+			</span>
+			
+			<span>
+				<label for="headers"><button id='head-bt'>Add</button></label>
+				<select name="headers" id="headers">
+					<option label="#">H1&nbsp;&nbsp;</option>
+					<option label="##">H2&nbsp;&nbsp;</option>
+					<option label="###">H3&nbsp;&nbsp;</option>
+					<option label="####">H4&nbsp;&nbsp;</option>
+					<option label="#####">H5&nbsp;&nbsp;</option>
+					<option label="######">H6&nbsp;&nbsp;</option>
+				</select>
+			</span>
+			
+			<span id="more-bts">
+				<button id="citacao">Quote</button>
+		
+				<button id="image">img</button>
+				<button id="link">link</button>
+				<button id="referencia">ref</button>
+				<button id="tabela">Table</button>
+				<button id="code">code</button>
+			</span>
+		</div>
 		<!--<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Cheatsheet</a>-->
 		<div class="left-content split">
-			<div id="text-editor">
-				<span id="text-bts">
-					<button id="negrito"><b>B</b></button>
-					<button id="italico"><i>I</i></button>
-					<button id="taxado"><del>del</del></button>
-					<button id="linha">HR</button>
-				</span>
-				<span id="list-bts">
-					<button id="lista">List</button>
-					<button id="ordenada">Ordered List</button>
-				</span>
-				
-				<span>
-					<label for="headers"><button id='head-bt'>Add</button></label>
-					<select name="headers" id="headers">
-						<option label="#">H1&nbsp;&nbsp;</option>
-						<option label="##">H2&nbsp;&nbsp;</option>
-						<option label="###">H3&nbsp;&nbsp;</option>
-						<option label="####">H4&nbsp;&nbsp;</option>
-						<option label="#####">H5&nbsp;&nbsp;</option>
-						<option label="######">H6&nbsp;&nbsp;</option>
-					</select>
-				</span>
-				
-				<span id="more-bts">
-					<button id="citacao">Quote</button>
-			
-					<button id="image">img</button>
-					<button id="link">link</button>
-					<button id="referencia">ref</button>
-					<button id="tabela">Table</button>
-					<button id="code">code</button>
-				</span>
-				<br>
-				<textarea id="input-text" rows="30" placeholder="*Write your text here*"># Título do artigo
+			<textarea id="input-text" rows="30" placeholder="*Write your text here*"># Título do artigo
 
 o texto continua aqui
 
@@ -87,7 +87,6 @@ Texto em **negrito**
 é bom escrever sem precisar ligar para a numeração
 
 ***os 4 últimos botões não funcionam***</textarea>
-			</div>
 		</div>
 		<div class="right-content split">
 			<style scoped>

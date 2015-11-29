@@ -22,11 +22,6 @@ html, body { height: 100%; }
 	/*overflow: hidden;*/
 }
 
-#text-editor
-{
-	height: 100%;
-}
-
 div.left-content
 {
 	bottom: 0;
@@ -37,8 +32,18 @@ div.right-content
 {
 	left:50%;
 }
-span, button,
-select{
+span, button, select
+{
     display: inline-flex;
     vertical-align: middle;
+}
+
+div#nav_wrap
+{
+
+}
+
+div#nav
+{
+	background: #999;
 }
