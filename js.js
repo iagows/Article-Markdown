@@ -2,6 +2,27 @@ $(function() {
 	var editor = byId('input-text');
 	editor.onkeyup = updatePreview;
 
+	var dialog, page;
+	page = "http://assemble.io/docs/Cheatsheet-Markdown.html";
+	dialog = $("<div></div>")
+		.html('<iframe style="border: 0; " src="' + page + '" width="100%" height="100%"></iframe>')
+		.dialog({
+			title: "Cheatsheet",
+			autoOpen: false,
+			dialogClass: 'dialog_fixed,ui-widget-header',
+			modal: true,
+			height: 500,
+			width: 700,
+			minWidth: 400,
+			minHeight: 400,
+			draggable: true,
+			buttons: {
+				"Ok": function() {
+					dialog.dialog("close");
+				}
+			}
+    	});
+
 	//botões
 	$("#link").button({
 		icons: {
@@ -28,6 +49,7 @@ $(function() {
 	$("#text-bts").buttonset();
 	$("#list-bts").buttonset().next().buttonset();
 	$("#more-bts").buttonset();
+	$("#others").buttonset();
 
 	$("#head-bt").click(function(){
 		var opt = byId("headers");
@@ -64,6 +86,10 @@ $(function() {
 	$("#citacao").click(function() {
 		addAtLineBegining("> ");
 	});
+
+	$("#cheat").click(function () {
+		dialog.dialog("open");
+	})
 	updatePreview();
 	pageScroll();
 });
