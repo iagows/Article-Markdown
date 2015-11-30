@@ -1,25 +1,46 @@
-:scope h1 {
-	text-transform: uppercase;
-	counter-reset: h2counter;
+:scope *
+{
+	font-size: 1em;
 }
+
 :scope p {
 	text-align: justify;
 	text-indent: 1em;
 }
-:scope body {
-	counter-reset: h2counter;
+
+:scope h1, :scope h2, :scope h3
+{
+	text-transform: uppercase;
 }
-:scope h2, :scope h3 {text-transform: uppercase;}
-:scope h2:before {
-	content: counter(h2counter) ".\0000a0\0000a0";
-	counter-increment: h2counter;
-	counter-reset: h3counter;
+
+/* contador dos cabeçalhos */
+:scope body
+{
+	counter-reset: section;
 }
-:scope h3:before {
-	content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
-	counter-increment: h3counter;
+
+:scope h1
+{
+	counter-reset: section;
 }
-:scope blockquote {
+
+:scope h2:before
+{
+	counter-increment: section;
+	content: counter(section) ".\0000a0\0000a0";
+	counter-reset: subsection;
+}
+
+:scope h3:before
+{
+	counter-increment: subsection;
+	content: counter(section) "." counter(subsection) ".\0000a0\0000a0";
+}
+/* fim do contador dos cabeçalhos */
+
+/* citação */
+:scope blockquote
+{
 	background: #f9f9f9;
 	border-left: 10px solid #ccc;
 	margin: 1.5em 10px;
@@ -45,6 +66,7 @@
 :scope blockquote p {
 	display: inline;
 }
+/* fim citação */
 
 :scope table {
 	border: 1px solid black;

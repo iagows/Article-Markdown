@@ -5,7 +5,10 @@ body
 	font-size: 0.7em;
 }
 
-html, body { height: 100%; }
+html, body
+{
+	height: 100%;
+}
 
 .split {
 	width: 50%;
@@ -36,11 +39,6 @@ span, button, select
 {
     display: inline-flex;
     vertical-align: middle;
-}
-
-div#nav_wrap
-{
-
 }
 
 div#nav
