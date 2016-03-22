@@ -166,9 +166,11 @@ function updatePreview()
 	var receiver = byId('text-receiver');
 	var editor = byId('input-text');
 	var text = editor.value;
+	
 	text = marked(text);
 
 	receiver.innerHTML = text;
+	Preview.Update();
 	/*
 	editor.style.height = "1px";
     editor.style.height = (25+editor.scrollHeight)+"px";*/
