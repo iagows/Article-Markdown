@@ -89,7 +89,8 @@ $(function() {
 
 	$("#cheat").click(function () {
 		dialog.dialog("open");
-	})
+	});
+
 	updatePreview();
 	pageScroll();
 });
@@ -164,6 +165,7 @@ function updatePreview()
 {
 	var receiver = byId('text-receiver');
 	var editor = byId('input-text');
+	jsMath.ProcessBeforeShowing(editor);
 	var text = editor.value;
 	text = marked(text);
 
