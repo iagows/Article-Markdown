@@ -67,7 +67,8 @@
 				CreatePreview: function () {
 					Preview.timeout = null;
 					if (this.mjPending) return;
-						var text = document.getElementById("input-text").value;
+						//var text = document.getElementById("input-text").value;
+						var text = document.getElementById("text-receiver").value;
 					if (text === this.oldtext) return;
 					if (this.mjRunning) {
 					  this.mjPending = true;
