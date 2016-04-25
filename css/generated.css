@@ -14,21 +14,20 @@
 }
 
 /* contador dos cabeçalhos */
-:scope body
+:scope h1
 {
 	counter-reset: section;
 }
 
-:scope h1
+:scope h2
 {
-	counter-reset: section;
+	counter-reset: subsection;
 }
 
 :scope h2:before
 {
 	counter-increment: section;
 	content: counter(section) ".\0000a0\0000a0";
-	counter-reset: subsection;
 }
 
 :scope h3:before
